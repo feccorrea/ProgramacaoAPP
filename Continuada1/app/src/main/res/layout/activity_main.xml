@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cálculo de média das provas"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_titulo"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuada 1"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+        android:id="@+id/tv_subtitulo"
+        />
+
+    <TextView
+        android:id="@+id/tv_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Digite seu nome:"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        android:layout_marginRight="77dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitulo"
+        />
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nome" />
+
+    <TextView
+        android:id="@+id/tv_nota1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite sua primeira nota:"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        android:layout_marginRight="31dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        />
+
+    <EditText
+        android:id="@+id/et_n1"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:inputType="numberDecimal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nota1"
+        />
+
+    <TextView
+        android:id="@+id/tv_nota2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Digite sua segunda nota:"
+        android:textColor="#000000"
+        android:textSize="13dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_n1"
+        />
+
+    <EditText
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/tv_nota2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/et_n2"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_calcular"
+        app:layout_constraintTop_toBottomOf="@id/et_n2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Calcular Média"
+        android:layout_marginTop="20dp"
+        android:onClick="validar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvresultado"
+        app:layout_constraintTop_toBottomOf="@id/bt_calcular"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
